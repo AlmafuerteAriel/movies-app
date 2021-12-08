@@ -1,0 +1,4 @@
+npx create-react-app movie-react-app
+cd movie-react-app
+code .
+npm run start

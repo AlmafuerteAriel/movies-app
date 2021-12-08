@@ -1,7 +1,7 @@
 import styles from "./App.module.css";
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -20,17 +20,11 @@ export function App() {
       </Link>
     </header>
     <main>
-      <Switch>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/movies/:movieId">
-          <MovieDetails />
-        </Route>
-        <Route path="/">
-          <LandingPage />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/movies/:movieId" element={<MovieDetails />} />
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
     </main>
   </Router>
 }

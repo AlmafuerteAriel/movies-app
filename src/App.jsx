@@ -1,4 +1,3 @@
-import { MoviesGrid } from "./components/MoviesGrid";
 import styles from "./App.module.css";
 import {
   BrowserRouter as Router,
@@ -12,8 +11,9 @@ import { LandingPage } from "./pages/LandingPage";
 export function App() {
   return <Router>
     <header>
-      <Link to="/"><h1 className={styles.title}>My Movies App</h1></Link>
-      {/* <Link to="/movie">Movie</Link> */}
+      <Link to="/">
+        <h1 className={styles.title}>My Movies App</h1>
+      </Link>
     </header>
     <main>
       <Switch>

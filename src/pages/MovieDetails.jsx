@@ -1,18 +1,26 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Spinner } from '../components/Spinner';
 import { get } from '../utils/httpClient';
-//import movie from "./movie.json";
 import styles from "./MovieDetails.module.css";
 
 export function MovieDetails() {
   const { movieId } = useParams();
+  const [isLoading, setIsLoading] = useState(true);
   const [movie, setMovie] = useState(null);
+
   useEffect(() => {
+    setIsLoading(true);
     get(`/movie/${movieId}`)
     .then(data => {
-      setMovie(data)
+      setIsLoading(false);
+      setMovie(data);
     });
-  }, [movieId])
+  }, [movieId]);
+
+  if (isLoading) {
+    return <Spinner />
+  }
 
   // Evitamos cargar al inicio con valor = null!!!
   if(!movie) {

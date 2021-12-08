@@ -7,16 +7,23 @@ import {
 } from "react-router-dom";
 import { MovieDetails } from "./pages/MovieDetails";
 import { LandingPage } from "./pages/LandingPage";
+import { About } from "./pages/About";
 
 export function App() {
   return <Router>
-    <header>
+    <header className="container">
       <Link to="/">
         <h1 className={styles.title}>My Movies App</h1>
+      </Link>
+      <Link to="/about">
+        <h2 className={styles.about}>About</h2>
       </Link>
     </header>
     <main>
       <Switch>
+        <Route exact path="/about">
+          <About />
+        </Route>
         <Route exact path="/movies/:movieId">
           <MovieDetails />
         </Route>

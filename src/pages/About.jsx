@@ -1,9 +1,11 @@
+import styles from "./About.module.css";
+
 export function About() {
-  return <div>
-    <h1>¡Hola!</h1>
-    <h1>Soy Ariel Romero, Full Stack Developer.</h1>
-    <p>Actualmente soy estudiante en HENRY, donde he adquirido conocimientos sobre HTML, CSS, JavaScript, ReactJS, Redux, NodeJS, Express, Sequalize y Postgres entre otras tecnologías.</p>
-    <p>Este es un proyecto en donde he utilizado parte de lo aprendido hasta ahora.</p>
-    <p>Gracias por tu visita, ¡que tengas un excelente día!</p>
+  return <div className={styles.aboutContainer}>
+    <h1>Hello!</h1>
+    <h2>Mi name is Ariel Romero.</h2>
+    <p className={styles.aboutText}>I am a graduate of HENRY, where I have acquired knowledge about HTML, CSS, JavaScript, ReactJS, Redux, NodeJS, Express, Sequalize and Postgres among other technologies.</p>
+    <p className={styles.aboutText}>This is a project where I have used part of what I have learned.</p>
+    <p className={styles.aboutText}>Thanks for your visit, have a great day!</p>
   </div> 
 }

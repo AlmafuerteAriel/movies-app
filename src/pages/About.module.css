@@ -1,0 +1,10 @@
+.aboutContainer {
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+  height: auto;
+}
+
+.aboutText {
+  font-size: 1.2rem;
+}

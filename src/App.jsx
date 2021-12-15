@@ -11,15 +11,15 @@ import { About } from "./pages/About";
 
 export function App() {
   return <Router>
-    <header className="container">
-      <Link to="/">
+    <header className={styles.container}>
+      <Link className={styles.titleContainer} to="/">
         <h1 className={styles.title}>My Movies App</h1>
       </Link>
-      <Link to="/about">
+      <Link className={styles.aboutContainer} to="/about">
         <h2 className={styles.about}>About</h2>
       </Link>
     </header>
-    <main>
+    <main className={styles.main}>
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/movies/:movieId" element={<MovieDetails />} />
